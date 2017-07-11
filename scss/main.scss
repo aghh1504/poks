@@ -1,0 +1,66 @@
+*{
+    // background-image: url("../img/dark-triangles.png");
+    /* Background pattern from Subtle Patterns */
+    background-color: gray;
+    margin: 0;
+}
+.wraper{
+    margin: 0 auto;
+    width: 1200px;
+    h1{
+        line-height: 100px;
+        text-align: center;
+        letter-spacing: 5px;
+        word-spacing: 10px;
+    }
+    form{
+        text-align: center;
+        input{
+            background-color: #909090;
+            border: 2px solid #555;
+            border-radius: 2px;
+            outline: none;
+            height: 23px;
+            width: 170px;
+            color: #555;
+        }
+    }
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    border: 1px solid #555;
+    border-radius: 2px;
+    padding: 50px 0;
+    margin-top: 50px;
+    li{
+        font-size: 15px;
+        list-style: none;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 10px 50px;
+        min-height: 182px;
+        strong{
+            letter-spacing: 2px;
+            text-shadow: 1px;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
+}
+button{
+    outline: none;
+    width: 100px;
+    height: 40px;
+    border: 2px solid #555;
+    border-radius: 2px;
+    margin-top: 10px;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
