@@ -3,8 +3,6 @@ import MorePokeInfo from './MorePokeInfo.jsx';
 import Pokemon from './Pokemon.jsx';
 import Search from './Search.jsx';
 
-// import pokeball from '../pokeball.gif';
-
     class PokeList extends React.Component{
         state = {
             name : '',
@@ -27,11 +25,9 @@ import Search from './Search.jsx';
         }
         render(){
             const {pokemons} = this.state;
-
             return (
                 <div>
                     <Search pokemons={pokemons}/>
-
                     <ul>
                     {pokemons.length > 0 &&
                       pokemons.map((pokemon)=>{

@@ -13,6 +13,3 @@ export default class App extends Component {
       )
     }
 }
-
-// <Header welcomeText={"Welcome to the Pokedex!"}/>
-// <PokeList />

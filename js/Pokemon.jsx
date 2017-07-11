@@ -12,6 +12,7 @@ export default class Pokemon extends React.Component {
               this.setState({pokemonSprite: data});
           });
     }
+    // pokemonSprite is object for one pokemon
     renderSprite = (pokemonSprite) => {
       return (
           <div>

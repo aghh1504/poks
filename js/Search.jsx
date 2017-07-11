@@ -14,28 +14,23 @@ export default class Search extends Component{
 
     handleSubmit = event => {
         event.preventDefault();
-
+        const {pokemons} = this.props
+        const {name} = this.state
         // console.log("Pokemons for search: ", this.props.pokemons);
 
-        const searchResult = this.props.pokemons.filter((pokemon) => {
-          return pokemon.name === this.state.name.toLowerCase();
+        const searchResult = pokemons.filter((pokemon) => {
+        const searchFor = name.toLowerCase();
+          return pokemon.name.indexOf(searchFor) !== -1;
         });
 
         this.setState({results: searchResult});
 
         console.log("searchResult: ", searchResult);
-
-
-        // this.props.pokemons.map(pokemon => {
-        //     if(pokemon.key === this.state.name.toLowerCase()) {
-        //         this.setState({s: <Pokemon />})
-        //     }
-        // });
     }
 
     render(){
       const {results} = this.state;
-      const pokemon = results[0] || {};
+      const pokemons = results || [];
 
         return (
           <div>
@@ -49,8 +44,11 @@ export default class Search extends Component{
                     <button type='submit'>Search</button>
                 </label>
             </form>
-            {pokemon.name && <Pokemon key={pokemon.name} name={pokemon.name} details={pokemon}/>}
-            {!pokemon.name && <p>Not found / no results</p>}
+            {pokemons.length > 0 ?
+              pokemons.map((pokemon)=>{
+                return <Pokemon key={pokemon.name} details={pokemon} />
+              })
+            :<p>Not found / no results</p>}
           </div>
         )
     }
